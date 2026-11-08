@@ -1,0 +1,17 @@
+{
+  "name": "simple-decimal-time",
+  "version": "0.1.0",
+  "description": "Converts 24-hour clock times to decimal hours and back for time tracking.",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": "./src/index.js",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test"
+  },
+  "keywords": [],
+  "license": "ISC",
+  "dependencies": {}
+}
