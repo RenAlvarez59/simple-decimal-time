@@ -43,3 +43,10 @@ is a bug on the caller's side, not a time of day.
 - `fromDecimalHours(hours)` — decimal hours to clock string, wrapped modulo 24.
 - `decimalHoursBetween(start, end)` — signed difference in decimal hours.
 - `DecimalTimeError` — thrown for every invalid input above.
+
+## Performance
+
+The window keeps a bounded buffer, so `push` is constant time and memory does not
+grow with the length of the stream. `peak` and `trough` are linear in the window
+size, which is the trade that keeps `push` cheap.
+
